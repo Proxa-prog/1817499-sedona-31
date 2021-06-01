@@ -1,0 +1,254 @@
+:root {
+	--basic-white: #ffffff;
+	--basic-blue: #81B3D2;
+	--basic-middle-blue:#669EC0;
+	--basic-hard-blue:#5496BD;
+	--basic-brown: #766357;
+	--basic-light-brown: #EEEEEE;
+	--basic-medium-brown:#604E43;
+	--basic-hard-brown:#503E33;
+	--basic-dark: #000000;
+	--basic-extra-dark:#333333;
+	--basic-grey: #ABABAB;s
+	--basic-light-grey: #CACACA;
+	--basic-extra-grey: #E5E5E5;
+	--basic-extra-light-grey: #F2F2F2;
+	--basic-grey-medium:#EBEBEB;
+	--basic-asfalt:#A9A9A9;
+}
+
+.page_body {
+	min-width: 1200px;
+	margin: 0;
+	padding: 0;
+	font-family: "PT Sans" , Arial, sans-seirf;
+	font-size: 14px;
+	line-height: 21px;
+	font-style: normal;
+	font-weight: bold;
+	color: var(--basic-extra-grey);
+	text-transform: uppercase;
+	background-color: var(--basic-white);
+	background-image: url("../img/background_photo@2x.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+
+/*header*/
+
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main_navigation {
+	line-height: 26px;
+	background-color: var(--basic-white);
+}
+
+.site_navigation{
+	list-style: none;
+}
+
+.site_navigation a {
+	color: var(--basic-dark);
+}
+.site_navigation a:hover{
+	color: var(--basic-blue);
+}
+
+.site_navigation a:active{
+	color: var(--basic-dark);
+}
+
+.site_navigation a:visited{
+	color: var(--basic-brown);
+}
+
+
+/*main_caontainer*/
+
+
+.container_logo {
+	text-align: center;
+}
+
+.container_logo h2 {
+	color: var(--basic-dark);
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+}
+
+.container p {
+	color: var(--basic-dark);
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: normal;
+}
+
+/*advantages*/
+
+
+.advantages_list , .footer_lists {
+	list-style: none;
+}
+
+.real_town , .devil{
+	background-color: var(--basic-blue);
+	text-align: center;
+	color: var(--basic-white);
+	font-weight: normal;
+}
+
+.real_town p {
+	color: var(--basic-white);
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.advantages_items h3 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	text-align: center;
+	color: var(--basic-dark);
+}
+
+.advantages_items p {
+	color: var(--basic-dark);
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+}
+
+ .advantages_items .bground {
+	background-color:  var(--basic-light-brown);
+}
+
+/*hotel search*/
+
+
+.hotel_search {
+	line-height: 24px;
+	text-align: center;
+	color: var(--basic-extra-dark);
+}
+
+.hotel_search h2{
+	font-size: 30px;
+	line-height: 24px;
+	text-align: center;
+	font-weight: bold;
+	color: var(--basic-dark);
+}
+
+.button_hotel_search {
+	width: 568px;
+	height: 86px;
+	background-color: var(--basic-brown);
+	line-height: 26px;
+	font-size: 21px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:  var(--basic-white);
+}
+
+.button_hotel_search:hover {
+	background-color: var(--basic-medium-brown);
+}
+
+.button_hotel_search:active {
+	background-color: var(--basic-hard-brown);
+}
+
+.date_form {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--basic-dark);
+
+
+}
+
+.arrival , .departure , .button_how_much , .how_much_people{
+	background-color: var(--basic-extra-light-grey);
+	border: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.arrival:hover , .departure:hover {
+	background-color: var(--basic-grey-medium);
+}
+
+.arrival:focus , .departure:focus {
+	background-color: var(--basic-white);
+}
+
+.button_find {
+	width: 458px;
+	height: 58px;
+	background-color: var(--basic-blue);
+	color:  var(--basic-white);
+	font-size: 21px;
+	line-height: 26px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+}
+
+.button_find:hover{
+	background-color:var(--basic-middle-blue);
+}
+
+.button_find:active{
+	background-color: var(--basic-hard-blue);
+}
+
+
+/*footer*/
+
+
+.main_footer a{
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: var(--basic-dark);
+}
+
+.footer_copiright p {
+	line-height: 26px;
+}
+
+
+
+.footer_social {
+	text-align: center;
+}
+
+/* так как тут svg, не понял как лучше подстроится под стайлгайд
+вставить другой svg файл или с помощью свойства. Аналогично с htmlacademy
+и календарём.
+
+.social_button:hover{ 
+
+	opacity: 0.5;
+}
+
+.social_button:focus{
+	
+}
+*/
+
+
+
