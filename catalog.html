@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
 	<title>Каталог</title>
 	<meta charset="utf-8">
@@ -7,15 +7,15 @@
 	<link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="favicon/180.png">
 	<link rel="mainifest" href="mainifest.webmanifest">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	<header>
-	  	<nav>
-	  		<a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></a>
-			<ul>	
+<body class="page_body">
+	<header class="main_header">
+	  	<nav class="main_navigation">
+	  		<a  class="main_header_logo" href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип"></a>
+			<ul class="site_navigation">	
 				<li><a href="blank.html">Информация</a></li>
 				<li><a href="blank.html">Фото и видео</a></li>
 				<li><a href="index.html#map">Карта штата</a></li>
@@ -23,52 +23,52 @@
 			</ul>
 	  	</nav>
 	</header>
-	<main>
+	<main class="container">
 
-		<h1>Каталог</h1>
+		<h1 class="catalog">Каталог</h1>
 
-		<form action="#" method="get">
+		<form class="catalog_form" action="#" method="get">
 
-		<section>
-			<h2>Выбор условий</h2>
+		<section class="selection_of_conditions">
+			<h2 class="selection">Выбор условий</h2>
 
 			<fieldset>
-				<legend>Инфраструктура:</legend>
-				<ul>
-					<li>
-						<label for="check_pool">Бассейн</label>
-						<input type="checkbox" name="pool" checked id="check_pool">
+				<legend class="caption infrastructure">Инфраструктура:</legend>
+				<ul class="infrastructure_list">
+					<li class="infrastructure_items">
+						<label class="description" for="check_pool">Бассейн</label>
+						<input class="description_checkbox" type="checkbox" name="pool" checked id="check_pool">
 					</li>
-					<li>
-						<label for="check_parking">Парковка</label>
-						<input type="checkbox" name="parking"  id="check_parking">
+					<li class="infrastructure_items">
+						<label class="description" for="check_parking">Парковка</label>
+						<input class="description_checkbox" type="checkbox" name="parking"  id="check_parking">
 					</li>
-					<li>
-						<label for="check_wifi">Wi-fi</label>
-						<input type="checkbox" name="wi-fi"  id="check_wifi">
+					<li class="infrastructure_items">
+						<label class="description" for="check_wifi">Wi-fi</label>
+						<input class="description_checkbox" type="checkbox" name="wi-fi"  id="check_wifi">
 					</li>
 				</ul>
 			</fieldset>
 			<fieldset>
-				<legend>Тип жилья:</legend>
-				<ul>
-					<li>
-						<label for="check_hotel">Гостиница</label>
-						<input type="checkbox" name="hotel" checked id="check_hotel">
+				<legend class="caption type_of_housing">Тип жилья:</legend>
+				<ul class="type_of_housing_list">
+					<li class="type_of_housing_items">
+						<label class="description" for="check_hotel">Гостиница</label>
+						<input class="description_checkbox" type="checkbox" name="hotel" checked id="check_hotel">
 					</li>
-					<li>
-						<label for="check_motel">Мотель</label>
-						<input type="checkbox" name="motel"  checked id="check_motel">
+					<li class="type_of_housing_items">
+						<label class="description" for="check_motel">Мотель</label>
+						<input class="description_checkbox" type="checkbox" name="motel"  checked id="check_motel">
 					</li>
-					<li>
-						<label for="check_apartments">Апартаменты</label>
-						<input type="checkbox" name="apartments" checked id="check_apartments">
+					<li class="type_of_housing_items">
+						<label class="description" for="check_apartments">Апартаменты</label>
+						<input class="description_checkbox" type="checkbox" name="apartments" checked id="check_apartments">
 					</li>
 				</ul>
 			</fieldset>
 
 			<div>
-				<p>Стоимость в сутки,₽:</p>	
+				<p class="caption filter_caption">Стоимость в сутки,₽:</p>	
 				<div class="filter">
 					<div class="filter-range-wrapper">
 						<div class="filter-range">
@@ -80,88 +80,90 @@
 						</div>
 					</div>
 
-					<div>
-						<label>От <input type="text" name="startingprice"  value="0"></label>
-						<label>До <input type="text" name="thefinalprice" value="3000"></label>
+					<div class="cost">
+						<label class="from">От <input type="text" name="startingprice"  value="0"></label>
+						<label class="to">До <input type="text" name="thefinalprice" value="3000"></label>
 					</div>
 				</div>
-				<button type="submit" name="show">Показать</button>
+				<button class="button_show" type="submit" name="show">Показать</button>
 			</div>
 		</section>
 
 		</form>
 		
-		<section>
+		<section class="result">
 			<h2>Результаты поиска</h2>
 
-			<p>Найдено 3</p>
-			<p>Сортировка</p>
-			<ul>
-				<li><a href="#">По цене</a></li>
-				<li><a href="#">По типу</a></li>
-				<li><a href="#">По рейтингу</a></li>
+			<p class="result_find">Найдено 3</p>
+			<p class="result_sort">Сортировка</p>
+
+			<ul class="result_sort_list">
+				<li class="result_sort_item"><a class="price" href="#">По цене</a></li>
+				<li class="result_sort_item"><a class="type" href="#">По типу</a></li>
+				<li class="result_sort_item"><a class="to_rating" href="#">По рейтингу</a></li>
 			</ul>
 
-			<ul>
-				<li><a href="#"><img src="img/up.svg" width="11" height="10" alt="Вверх"></a></li>
-				<li><a href="#"><img src="img/down.svg" width="11" height="10" alt="Вниз"></a></li>
+			<ul class="leaf">
+				<li class="result_up"><a href="#"><img src="img/up.svg" width="11" height="10" alt="Вверх"></a></li>
+				<li class="result_down"><a href="#"><img src="img/down.svg" width="11" height="10" alt="Вниз"></a></li>
 			</ul>	
 				
-			<ul>	
-				<li>
+			<ul class="choice_list">	
+				<li class="choice_item">
 					<div>
-						<h3><a href="#">Amara Resort & SPA</a></h3>
-						<img src="img/amararesort.jpg"  width="135" height="90" alt="Вид из гостиницы">
-						<p>Гостиница</p>
-						<p>От 4000 ₽</p>
-						<a href="#">Подробнее</a>
-						<a href="#">Забронировать</a>
-						<img src="img/four_stars.svg"  width="91" height="17" alt="Четыре звезды">
-						<p>Рейтинг: 8,5</p>
+						<h3 class="choice_of_location"><a href="#">Amara Resort & SPA</a></h3>
+						<img class="location_foto" src="img/amararesort.jpg"  width="135" height="90" alt="Вид из гостиницы">
+						<p class="place_price">Гостиница</p>
+						<p class="place_price">От 4000 ₽</p>
+						<a class="more_details" href="#">Подробнее</a>
+						<a class="reservation" href="#">Забронировать</a>
+						<img class="star" src="img/four_stars.svg"  width="91" height="17" alt="Четыре звезды">
+						<p class="rating">Рейтинг: 8,5</p>
 					</div>
 				</li>
-				<li>
+				<li class="choice_item">
 					<div>
-						<h3><a href=#>Desert quail INN</a></h3>
-						<img src="img/desert.jpg"  width="135" height="90" alt="Стоянка отеля">
-						<p>Мотель</p>
-						<p>От 3000 ₽</p>
-						<a href="#">Подробнее</a>
-						<a href="#">Забронировать</a>
-						<img src="img/three_stars.svg"  width="66" height="17" alt="Три звезды">
-						<p>Рейтинг: 8,9</p>
+						<h3 class="choice_of_location"><a href=#>Desert quail INN</a></h3>
+						<img class="location_foto" src="img/desert.jpg"  width="135" height="90" alt="Стоянка отеля">
+						<p class="place_price">Мотель</p>
+						<p class="place_price">От 3000 ₽</p>
+						<a class="more_details" href="#">Подробнее</a>
+						<a class="reservation" href="#">Забронировать</a>
+						<img class="star" src="img/three_stars.svg"  width="66" height="17" alt="Три звезды">
+						<p class="rating">Рейтинг: 8,9</p>
 					</div>
 				</li>
-				<li>
+				<li class="choice_item">
 					<div>
-						<h3><a href=#>Villas at poco Diablo</a></h3>
-						<img src="img/villas.jpg"  width="135" height="90" alt="Вид на виллу">
-						<p>Апартаменты</p>
-						<p>ОТ 2000 ₽</p>
-						<a href="#">Подробнее</a>
-						<a href="#">Забронировать</a>
-						<img src="img/two_stars.svg"  width="42" height="17" alt="Две звезды">
-						<p>Рейтинг: 9,2</p>
+						<h3 class="choice_of_location"><a href=#>Villas at poco Diablo</a></h3>
+						<img class="location_foto" src="img/villas.jpg"  width="135" height="90" alt="Вид на виллу">
+						<p class="place_price">Апартаменты</p>
+						<p class="place_price">ОТ 2000 ₽</p>
+						<a class="more_details" href="#">Подробнее</a>
+						<a class="reservation" href="#">Забронировать</a>
+						<img class="star" src="img/two_stars.svg"  width="42" height="17" alt="Две звезды">
+						<p class="rating">Рейтинг: 9,2</p>
 					</div>
 				</li>
 			</ul>
 		</section>
-		<footer>
-			<div>
-				<a href="#">#VisitSedona</a>
-				<a href="tel:+78005558628">+7 800 555-86-28</a>
+		<footer class="main_footer">
+			<div class="footer_contact">
+				<a  class="footer_visit" href="#">#VisitSedona</a>
+				<a class="footer_phone" href="tel:+78005558628">+7 800 555-86-28</a>
 			</div>
 
-			<div>
-				<ul>
-					<li><a href="#"><img src="img/twitter.svg"  width="46" height="48" alt="twitter"></a></li>
-					<li><a href="#"><img src="img/facebook.svg"  width="46" height="48" alt="facebook"></a></li>
-					<li><a href="#"><img src="img/youtube.svg"  width="46" height="48" alt="youtube"></a></li>
+			<div class="footer_social">
+				<ul class="footer_lists">
+					<li><a class="social_button" href="#"><img class="twitter_logo" src="img/twitter.svg"  width="17" height="17" alt="twitter"></a></li>
+					<li><a class="social_button" href="#"><img class="facebook_logo" src="img/facebook.svg"  width="12" height="22" alt="facebook"></a></li>
+					<li><a class="social_button" href="#"><img class="youtube_logo" src="img/youtube.svg"  width="20" height="16" alt="youtube"></a></li>
 				</ul>
 			</div>
-			<div>
+
+			<div class="footer_copiright">
 				<p>Website by</p>
-				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy"></a>
+				<a class="button_html_logo" href="https://htmlacademy.ru/intensive/htmlcss"><div class="html_logo"></div><!-- <img class="html_logo" src="img/logo_htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy"> --></a>
 			</div>
 		</footer>
 	</main>
