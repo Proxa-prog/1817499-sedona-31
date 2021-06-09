@@ -32,8 +32,8 @@
 		<section class="selection_of_conditions">
 			<h2 class="selection">Выбор условий</h2>
 
-			<fieldset>
-				<legend class="caption infrastructure">Инфраструктура:</legend>
+			<fieldset class="infrastructure">
+				<legend class="caption">Инфраструктура:</legend>
 				<ul class="infrastructure_list">
 					<li class="infrastructure_items">
 						<label class="description" for="check_pool">Бассейн</label>
@@ -49,8 +49,8 @@
 					</li>
 				</ul>
 			</fieldset>
-			<fieldset>
-				<legend class="caption type_of_housing">Тип жилья:</legend>
+			<fieldset class="type_of_housing">
+				<legend class="caption">Тип жилья:</legend>
 				<ul class="type_of_housing_list">
 					<li class="type_of_housing_items">
 						<label class="description" for="check_hotel">Гостиница</label>
@@ -93,23 +93,23 @@
 		
 		<section class="result">
 			<h2>Результаты поиска</h2>
+			<div class="result_find_line">
+				<span class="result_find">Найдено 3</span>
+				<span class="result_sort">Сортировка</span>
 
-			<p class="result_find">Найдено 3</p>
-			<p class="result_sort">Сортировка</p>
+				<ul class="result_sort_list">
+					<li class="result_sort_item"><a class="price" href="#">По цене</a></li>
+					<li class="result_sort_item"><a class="type" href="#">По типу</a></li>
+					<li class="result_sort_item"><a class="to_rating" href="#">По рейтингу</a></li>
+				</ul>
 
-			<ul class="result_sort_list">
-				<li class="result_sort_item"><a class="price" href="#">По цене</a></li>
-				<li class="result_sort_item"><a class="type" href="#">По типу</a></li>
-				<li class="result_sort_item"><a class="to_rating" href="#">По рейтингу</a></li>
-			</ul>
-
-			<ul class="leaf">
-				<li class="result_up"><a href="#"><img src="img/up.svg" width="11" height="10" alt="Вверх"></a></li>
-				<li class="result_down"><a href="#"><img src="img/down.svg" width="11" height="10" alt="Вниз"></a></li>
-			</ul>	
-				
+				<ul class="leaf">
+					<li class="result_up"><a href="#"><img src="img/up.svg" width="11" height="10" alt="Вверх"></a></li>
+					<li class="result_down"><a href="#"><img src="img/down.svg" width="11" height="10" alt="Вниз"></a></li>
+				</ul>	
+			</div>	
 			<ul class="choice_list">	
-				<li class="choice_item">
+				<li class="choice_item_amara">
 					<div>
 						<h3 class="choice_of_location"><a href="#">Amara Resort & SPA</a></h3>
 						<img class="location_foto" src="img/amararesort.jpg"  width="135" height="90" alt="Вид из гостиницы">
@@ -117,11 +117,13 @@
 						<p class="place_price">От 4000 ₽</p>
 						<a class="more_details" href="#">Подробнее</a>
 						<a class="reservation" href="#">Забронировать</a>
+					</div>
+					<div class="star_rating">	
 						<img class="star" src="img/four_stars.svg"  width="91" height="17" alt="Четыре звезды">
 						<p class="rating">Рейтинг: 8,5</p>
 					</div>
 				</li>
-				<li class="choice_item">
+				<li class="choice_item_desert">
 					<div>
 						<h3 class="choice_of_location"><a href=#>Desert quail INN</a></h3>
 						<img class="location_foto" src="img/desert.jpg"  width="135" height="90" alt="Стоянка отеля">
@@ -129,11 +131,13 @@
 						<p class="place_price">От 3000 ₽</p>
 						<a class="more_details" href="#">Подробнее</a>
 						<a class="reservation" href="#">Забронировать</a>
+					</div>
+					<div class="star_rating">
 						<img class="star" src="img/three_stars.svg"  width="66" height="17" alt="Три звезды">
 						<p class="rating">Рейтинг: 8,9</p>
 					</div>
 				</li>
-				<li class="choice_item">
+				<li class="choice_item_villas">
 					<div>
 						<h3 class="choice_of_location"><a href=#>Villas at poco Diablo</a></h3>
 						<img class="location_foto" src="img/villas.jpg"  width="135" height="90" alt="Вид на виллу">
@@ -141,6 +145,8 @@
 						<p class="place_price">ОТ 2000 ₽</p>
 						<a class="more_details" href="#">Подробнее</a>
 						<a class="reservation" href="#">Забронировать</a>
+					</div>
+					<div class="star_rating">
 						<img class="star" src="img/two_stars.svg"  width="42" height="17" alt="Две звезды">
 						<p class="rating">Рейтинг: 9,2</p>
 					</div>
@@ -162,8 +168,7 @@
 			</div>
 
 			<div class="footer_copiright">
-				<p>Website by</p>
-				<a class="button_html_logo" href="https://htmlacademy.ru/intensive/htmlcss"><div class="html_logo"></div><!-- <img class="html_logo" src="img/logo_htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy"> --></a>
+				<a class="button_html_logo" href="https://htmlacademy.ru/intensive/htmlcss"><p>Website by</p><div class="html_logo"></div><!-- <img class="html_logo" src="img/logo_htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy"> --></a>
 			</div>
 		</footer>
 	</main>
