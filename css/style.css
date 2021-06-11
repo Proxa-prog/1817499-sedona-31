@@ -28,8 +28,7 @@
 	font-style: normal;
 	font-weight: normal;
 	color: var(--basic-extra-grey);
-	text-transform: uppercase;
-	background-color: var(--basic-white);	
+	text-transform: uppercase;	
 
 	min-height: 100%;
 	display: grid;
@@ -39,6 +38,14 @@
 
 .page {
 	height: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  background-color: var(--basic-white);
 }
 
 
@@ -58,12 +65,11 @@ img {
 	line-height: 26px;
 	background-color: var(--basic-white);
 	display: grid;
-	min-width: 100%;
 }
 
 .main_header_logo {
 	justify-self:center;
-	position: relative;
+	position: relative;		/*В дальнейшем поменять позиционирование логотипа на абсолютное*/
 }
 
 .site_navigation {
@@ -96,9 +102,7 @@ img {
 .container_logo h1 {
 	display: none;
 }
-.container{
-	text-align: center;
-}
+
 .container_logo {
 	text-align: center;
 	background-image: url("../img/background_photo@2x.jpg");
@@ -107,11 +111,11 @@ img {
 }
 
 .container_img {
-	margin: 77.35px auto;
+	margin: 77px auto;
 }
 
 .reason p {
-	margin: 16.5px auto 51px;
+	margin: 16px auto 51px;
 	color: var(--basic-dark);
 	font-size: 14px;
 	line-height: 26px;
@@ -125,7 +129,7 @@ img {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
-	margin: 42.5px auto 0;
+	margin: 42px auto 0;
 }
 
 /*---------------------------------advantages---------------------------------*/
@@ -136,7 +140,7 @@ img {
 
 .advantages_list {
 	display: grid;
-	grid-template-rows: : 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;	/*Упростить*/
 }
 
 .advantages_items_first {
@@ -368,7 +372,8 @@ img {
 	background-repeat: no-repeat;
 	color: var(--basic-white);
 	display: grid;
-	grid-template-columns: min-content min-content 1fr;
+	grid-template-columns: 300px 300px 600px
+
 }
 
 .infrastructure {
@@ -418,19 +423,23 @@ img {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
-	display: grid;
-	grid-template-rows: min-content 1fr;
+}
+
+.result_find_line {
+	display: flex;
+}
+
+.result_sort_list, .leaf {
+	display: flex;
 }
 
 .choice_list {
-	display: grid;
-	grid-template-columns: min-content 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	margin-left: 0;
 }
 
 .choice_item_amara {
 	display: grid;
-	grid-template-columns: : 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row: 1/2;
 	grid-column: 1/-1;
 }
@@ -445,14 +454,14 @@ img {
 
 .choice_item_desert {
 	display: grid;
-	grid-template-columns: : 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row: 2/3;
 	grid-column: 1/-1;
 }
 
 .choice_item_villas {
 	display: grid;
-	grid-template-columns: : 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row: 3/4;
 	grid-column: 1/-1;
 }
@@ -462,11 +471,6 @@ img {
 	line-height: 26px;
 	font-weight: 700;
 	color: var(--basic-dark);
-}
-
-.result_sort_list li{
-	display: inline;
-	padding: 32px 32px 36px 32px;
 }
 
 .result_sort, .result_sort_list {
