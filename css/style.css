@@ -128,6 +128,7 @@ img {
 	line-height: 26px;
 	font-weight: bold;
 	margin: 42px auto 0;
+	text-align: center;
 }
 
 /*---------------------------------advantages---------------------------------*/
@@ -136,34 +137,32 @@ img {
 	list-style: none;
 }
 
+.advantages_header {
+	display: none;
+}
+
 .advantages_list {
-	display: grid;
-	grid-template-columns: : 1fr 1fr 1fr;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
 	padding-left: 0;
 }
 
 .advantages_items_first {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column: 1/-1;
+	flex-wrap: wrap;
 }
 
-.advantages_items_mountains {
-	grid-column: 2/4;
+.housing, .food, .souvenirs {	
+	box-sizing: border-box;
+	width: 400px;
+	height: 330px;
+	text-align: center;
+	padding-top: 160px;
 }
 
-.advantages_items_second {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column: 1/-1;
-}
-
-.advantages_items_devilsbridge {
-	grid-column: 1/3;
-}
-
-.devil {
-	grid-column: 3/4;
+.advantages_items {
+	display: flex;
+	margin-bottom: 0;
 }
 
 .real_town, .devil {
@@ -198,34 +197,39 @@ img {
 	text-align: center;
 }
 
- .advantages_items .back_space {
+ .advantages_items_grey {		/*Никак не пойму откуда взялся отступ над тремя пунктами списка*/
+ 	width: 400px;
+ 	height: 256px;
 	background-color:  var(--basic-light-brown);
 }
 
-/*.advantages_items_road {
-	width: 33%;
-	height: 256px;
-	grid-row: 3/4;
+.advantages_items_grey h3 {
+	margin-top: 47px;
 }
 
-.advantages_items_square {			затрудняюсь расположить эти 3 элемента, если только убрать их из списка в отдельный 
-	width: 33%;						div.
-	height: 256px;
-	grid-row: 3/4;
+.back_space {
+	margin: 0 auto;
 }
-
-.advantages_items_tourists {
-	width: 33%;
-	height: 256px;
-	grid-row: 3/4;
-}*/
 
 /*---------------------------------hotel search---------------------------------*/
+.interesting {
+	text-align: center;
+	margin-top: 0;
+}
+.interesting h2 {
+	margin-top: 58px;
+	margin-bottom: 4px;
+}
 
+.interesting p {
+	width: 435px;
+	height: 95px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
 
 .hotel_search {
 	line-height: 24px;
-	text-align: center;
 	color: var(--basic-extra-dark);
 }
 
@@ -258,10 +262,33 @@ img {
 }
 
 .date_form {
+	width: 568px;
+	height: 395px;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
 	color: var(--basic-dark);
+	background-color: var(--basic-white);
+}
+
+.arrival {
+	margin-top: 55px;
+	margin-bottom: 30px;
+}
+
+.arrival, .departure {
+	width: 346px;
+	height: 38px;
+}
+
+.date_form  label, .button_find {
+	margin-left: 55px;
+}
+
+.button_how_much, .how_much_people {
+	width: 38px;
+	height: 38px;
+	padding: 0;
 }
 
 .arrival, .departure, .button_how_much, .how_much_people {
@@ -294,6 +321,7 @@ img {
 	text-transform: uppercase;
 	font-weight: bold;
 	border: none;
+	margin-bottom: 55px;
 }
 
 .button_find:hover {
@@ -310,6 +338,7 @@ img {
 .main_footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	min-height: 120px;
 }
 
 .main_footer a {
