@@ -16,6 +16,7 @@
 	--basic-extra-light-grey: #F2F2F2;
 	--basic-grey-medium:#EBEBEB;
 	--basic-asfalt:#A9A9A9;
+	--basic-hard-grey: #888888;
 }
 
 .page_body {
@@ -29,7 +30,7 @@
 	font-weight: normal;
 	color: var(--basic-extra-grey);
 	text-transform: uppercase;	
-
+	background: var(--basic-hard-grey);
 	min-height: 100%;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
@@ -69,6 +70,8 @@ img {
 
 .main_header_logo {
 	position: absolute;	
+	left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .site_navigation {
@@ -76,7 +79,17 @@ img {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
+}
+
+.site_navigation li {
+	width: 240px;
+	text-align: center;
+	font-weight: bold;
+	color: var(--basic-dark);
+}
+
+.navigation_map, .navigation_hotel {
+
 }
 
 .site_navigation a {
@@ -97,7 +110,7 @@ img {
 /*---------------------------------main_container---------------------------------*/
 
 .container_logo h1 {
-	display: none;
+	display: none;	/*Исправить на visually-hidden*/
 }
 
 .container_logo {
@@ -138,7 +151,7 @@ img {
 }
 
 .advantages_header {
-	display: none;
+	display: none;  /*Исправить на visually-hidden*/
 }
 
 .advantages_list {
@@ -162,7 +175,6 @@ img {
 
 .advantages_items {
 	display: flex;
-	margin-bottom: 0;
 }
 
 .real_town, .devil {
@@ -181,7 +193,7 @@ img {
 	line-height: 21px;
 }
 
-.advantages_items h3 {
+.advantages_items h3, .advantages_items_grey h3 {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: bold;
@@ -189,7 +201,7 @@ img {
 	color: var(--basic-dark);
 }
 
-.advantages_items p {
+.advantages_items p, .advantages_items_grey p {
 	color: var(--basic-dark);
 	font-weight: normal;
 	font-size: 14px;
@@ -197,10 +209,10 @@ img {
 	text-align: center;
 }
 
- .advantages_items_grey {		/*Никак не пойму откуда взялся отступ над тремя пунктами списка*/
+ .advantages_items_grey {
  	width: 400px;
  	height: 256px;
-	background-color:  var(--basic-light-brown);
+	background-color: var(--basic-light-brown);
 }
 
 .advantages_items_grey h3 {
@@ -209,6 +221,14 @@ img {
 
 .back_space {
 	margin: 0 auto;
+}
+
+.advantages_items_picture {
+	width: 800px;
+}
+
+.picture {
+	display: block;
 }
 
 /*---------------------------------hotel search---------------------------------*/
@@ -223,7 +243,7 @@ img {
 
 .interesting p {
 	width: 435px;
-	height: 95px;
+	min-height: 95px;
 	margin: 0 auto;
 	padding-top: 25px;
 }
@@ -405,7 +425,6 @@ img {
 	color: var(--basic-white);
 	display: grid;
 	grid-template-columns: 300px 300px 600px
-
 }
 
 .infrastructure {
@@ -448,7 +467,7 @@ img {
 /*---------------------------------Result---------------------------------*/
 
 .result h2 {
-	display: none;
+	display: none;	/*Исправить на visually-hidden*/
 }
 
 .result {
@@ -459,6 +478,19 @@ img {
 
 .result_find_line {
 	display: flex;
+}
+
+.result_find {
+	margin: 29px 46px 31px 73px;
+}
+
+.result_sort {
+	margin: 31px 40px 37px 0;
+}
+
+.result_sort_item {
+	margin: 0;
+	margin: 31px 32px 36px 32px;
 }
 
 .result_sort_list, .leaf {
