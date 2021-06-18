@@ -270,7 +270,7 @@ img {
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
-	color:  var(--basic-white);
+	color: var(--basic-white);
 }
 
 .button_hotel_search:hover {
@@ -356,9 +356,32 @@ img {
 /*---------------------------------footer---------------------------------*/
 
 .main_footer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
 	min-height: 120px;
+}
+
+.footer_contact, .footer_social, .button_html_logo, .footer_copiright {
+	width: 400px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_contact p {
+	margin: 0;
+	margin-bottom: 9px;
+}
+
+.footer_contact {
+	flex-direction: column;
+}
+
+.footer_lists {
+	display: flex;
+	width: 150px;
+	justify-content: space-between;
+	text-align: center;
 }
 
 .main_footer a {
@@ -391,7 +414,6 @@ img {
 
 .social_button:hover { 
 	background-color: var(--basic-middle-blue);
-	
 }
 
 .social_button .twitter_logo:active {
@@ -402,6 +424,7 @@ img {
 	background-image:url("../img/logo_htmlacademy.svg"); 
 	width: 115px;
 	height: 33px;
+	margin-left: 5px;
 }
 
 .html_logo:hover {
@@ -423,16 +446,22 @@ img {
 	background-position: right 50% bottom 50%;
 	background-repeat: no-repeat;
 	color: var(--basic-white);
-	display: grid;
-	grid-template-columns: 300px 300px 600px
+	display: flex;
 }
 
 .infrastructure {
-	grid-column: 1/2;
+	width: 300px;
+	margin: 0;
 }
 
 .type_of_housing {
-	grid-column: 2/3;
+	width: 300px;
+	margin: 0;
+}
+
+.cost_filter {
+	width: 600px;
+	margin: 0;
 }
 
 .caption {
@@ -481,6 +510,7 @@ img {
 }
 
 .result_find {
+	width: 163px;
 	margin: 29px 46px 31px 73px;
 }
 
@@ -488,23 +518,37 @@ img {
 	margin: 31px 40px 37px 0;
 }
 
-.result_sort_item {
+.result_sort_item  {
 	margin: 0;
 	margin: 31px 32px 36px 32px;
 }
 
+.leaf li {
+	margin: 31px auto 36px;
+}
+
+.result_sort_list {
+	width: 800px;
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--basic-dark);
+	list-style: none;
+}
+
 .result_sort_list, .leaf {
 	display: flex;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 .choice_list {
-	margin-left: 0;
+	padding-left: 0;
 }
 
-/*По поводу задать размеры в пикселях, в фигме нет размера в пикселях. Как я понял, можно создать 2 флекс бокса и в них уже позиционировать элементы.
-Или вариант с пикселями приоритетнее? Если так, брать размер на глаз?*/
 .choice_item {		
 	display: flex;	
+	min-height: 151px;
 }					
 
 .star, .rating {
@@ -518,18 +562,10 @@ img {
 	color: var(--basic-dark);
 }
 
-.result_sort, .result_sort_list {
-	font-size: 12px;
-	line-height: 18px;
-	color: var(--basic-dark);
-	list-style: none;
-}
-
 .result_sort_item a {	
 	text-decoration: underline;
 	color: var(--basic-dark);
 	opacity: 0.3;
-	list-style: 
 }
 
 .result_sort_item a:hover {
