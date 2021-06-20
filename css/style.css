@@ -549,7 +549,20 @@ img {
 .choice_item {		
 	display: flex;	
 	min-height: 151px;
-}					
+}
+
+.choice_item_foto {
+	width: 237px;
+	padding: 30px 29px 30px 73px;
+}
+
+.choice_item_location {
+	width: 708px;
+}
+
+.star_rating {
+	width: 165px;
+}
 
 .star, .rating {
 	text-align: right;
