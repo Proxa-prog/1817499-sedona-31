@@ -30,7 +30,7 @@
 
 		<main>
 			<section class="container_logo">
-				<h1>Sedona</h1>
+				<h1 class="visually-hidden">Sedona</h1>
 					<div>
 						<img class="container_img" src="img/sedona.svg" width="456" height="350" alt="Приветствие">
 					</div>
@@ -43,7 +43,7 @@
 					</div>	
 			</section>		
 			<section class="advantages">
-				<h2 class="advantages_header">Преимущества</h2>
+				<h2 class="visually-hidden">Преимущества</h2>
 				<ul class="advantages_list">
 					<li class="advantages_items advantages_items_first">
 						<div class="real_town">
@@ -106,26 +106,27 @@
 				<div class="interesting">	
 					<h2>Заинтересовались?</h2>
 					<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				
 					<button class="button_hotel_search" type="button">Поиск гостиницы в Седоне</button>
 				</div>	
 				<img src="img/map.png"  width="1199" height="594" alt="Карта" id="map">
 
 				<form class="date_form" action="#" method="get">
 					<p class="date_arrival">
-						<label>Дата заезда:<input class="arrival" type="text" placeholder="24 Апреля 2017"></label>
-						<button class="button"><img class="calendar" src="img/calendar.svg" width="21" height="23" alt="Календарь"></button>
+						<label for="arrival">Дата заезда:</label>
+						<input class="arrival" type="text" placeholder="24 Апреля 2017">
+						<button class="button"></button>
 		   			 </p>
-		    		<p class="date_departure">
-						<label>Дата выезда:<input class="departure" type="text" placeholder="4 июля 2017"></label>
+		    		<p class="date">
+						<label for="date_departure">Дата выезда:</label>
+						<input class="departure" type="text" placeholder="4 июля 2017">
 						<button class="button"><img class="calendar" src="img/calendar.svg" width="21" height="23" alt="Календарь"></button>
 					</p>
 					<p class="date_how_much">
-							<label for="adults">Взрослые</label>
+							<label  class="how_much_adults" for="adults">Взрослые</label>
 							<button class="button_how_much"> - </button>
 							<input class="how_much_people" type="text" placeholder="2" id="adults">
-							<button class="button_how_much"> + </button>
-							<label for="child">Дети</label>
+							<button class="button_how_much button_gap"> + </button>
+							<label class="how_much_child" for="child">Дети</label>
 							<button class="button_how_much"> - </button>
 							<input class="how_much_people" type="text" placeholder="0" id="child">
 							<button class="button_how_much"> + </button>

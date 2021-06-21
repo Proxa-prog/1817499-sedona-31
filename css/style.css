@@ -49,6 +49,19 @@
   background-color: var(--basic-white);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 /*---------------------------------header---------------------------------*/
 
@@ -88,13 +101,17 @@ img {
 	color: var(--basic-dark);
 }
 
-.navigation_map, .navigation_hotel {
-
-}
-
 .site_navigation a {
+	display: block;
 	color: var(--basic-dark);
+	padding: 15px 15px;
+	box-sizing: border-box;
 }
+
+.site_navigation li:nth-child(3) {
+	margin-left: 418px;
+}
+
 .site_navigation a:hover {
 	color: var(--basic-blue);
 }
@@ -109,9 +126,6 @@ img {
 
 /*---------------------------------main_container---------------------------------*/
 
-.container_logo h1 {
-	display: none;	/*Исправить на visually-hidden*/
-}
 
 .container_logo {
 	text-align: center;
@@ -150,10 +164,6 @@ img {
 	list-style: none;
 }
 
-.advantages_header {
-	display: none;  /*Исправить на visually-hidden*/
-}
-
 .advantages_list {
 	display: flex;
 	flex-wrap: wrap;
@@ -171,6 +181,54 @@ img {
 	height: 330px;
 	text-align: center;
 	padding-top: 160px;
+}
+
+.housing h3 {
+	position: relative;
+}
+
+.housing h3::before {
+	content: "";
+	position: absolute;
+	width: 75px;
+	height: 72px;
+	background-image: url(../img/home.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	bottom: 50px;
+	left: 162px;
+}
+
+.food h3 {
+	position: relative;
+}
+
+.food h3::before {
+	content: "";
+	position: absolute;
+	width: 75px;
+	height: 70px;
+	background-image: url(../img/hamburger.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	bottom: 50px;
+	left: 162px;
+}
+
+.souvenirs h3 {
+	position: relative;
+}
+
+.souvenirs h3::before {
+	content: "";
+	position: absolute;
+	width: 64px;
+	height: 77px;
+	background-image: url(../img/gift.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	bottom: 50px;
+	left: 170px;
 }
 
 .advantages_items {
@@ -191,8 +249,14 @@ img {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 21px;
+	margin-bottom: 23px;
 }
 
+.real_town h2, .devil h2 {
+	margin-bottom: 25px;
+	margin-top: 47px;
+}
+	
 .advantages_items h3, .advantages_items_grey h3 {
 	font-size: 21px;
 	line-height: 21px;
@@ -289,19 +353,60 @@ img {
 	font-weight: 700;
 	color: var(--basic-dark);
 	background-color: var(--basic-white);
+	outline: 5px solid red;
 }
 
-.arrival {
-	margin-top: 55px;
-	margin-bottom: 30px;
+.date_form p {
+	width: 458px;
+	box-sizing: border-box;
+	outline: 2px solid blue;
+	margin: 29px auto;
+}
+
+.date label {
+	margin-right: 20px;
+}
+
+.how_much_adults {
+	margin-right: 37px;
+}
+
+.how_much_child {
+	margin-right: 25px;
+}
+
+.button_gap {
+	margin-right: 53px;
 }
 
 .arrival, .departure {
 	width: 346px;
 	height: 38px;
+	margin-left: 0;
+	outline: 2px solid blue;
 }
 
-.date_form  label, .button_find {
+.date_arrival {
+	margin-top: 55px;
+}
+
+.arrival {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.arrival::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/calendar.svg");
+	width: 21px;
+	height: 23px;
+	background-position: 0 0;
+	background-color: red;
+}
+
+.button_find {
 	margin-left: 55px;
 }
 
@@ -309,6 +414,7 @@ img {
 	width: 38px;
 	height: 38px;
 	padding: 0;
+	margin-right: 0;
 }
 
 .arrival, .departure, .button_how_much, .how_much_people {
@@ -352,9 +458,9 @@ img {
 	background-color: var(--basic-hard-blue);
 }
 
-
-/*---------------------------------footer---------------------------------*/
-
+/*
+---------------------------------footer---------------------------------
+*/
 .main_footer {
 	display: flex;
 	min-height: 120px;
@@ -495,9 +601,6 @@ img {
 
 /*---------------------------------Result---------------------------------*/
 
-.result h2 {
-	display: none;	/*Исправить на visually-hidden*/
-}
 
 .result {
 	font-size: 14px;
@@ -599,7 +702,7 @@ img {
 	color: var(--basic-blue);
 }
 
-.leaf, .choice_list {	 /*Пока оставляю так, в дальнейшем сделать белую часть иконки изменяющей цвет*/
+.leaf, .choice_list {	/* Пока оставляю так, в дальнейшем сделать белую часть иконки изменяющей цвет*/
 	list-style: none;
 }
 
@@ -618,7 +721,7 @@ img {
 .choice_of_location a:active {
 	color: var(--basic-dark);
 	opacity: 0.3;
-}
+/
 
 .more_details {
 	width: 110px;
