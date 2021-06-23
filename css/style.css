@@ -92,6 +92,7 @@ img {
 	margin: 0;
 	padding: 0;
 	display: flex;
+	justify-content: space-between;
 }
 
 .site_navigation li {
@@ -99,17 +100,11 @@ img {
 	text-align: center;
 	font-weight: bold;
 	color: var(--basic-dark);
+	padding: 15px 15px;
 }
 
 .site_navigation a {
-	display: block;
 	color: var(--basic-dark);
-	padding: 15px 15px;
-	box-sizing: border-box;
-}
-
-.site_navigation li:nth-child(3) {
-	margin-left: 418px;
 }
 
 .site_navigation a:hover {
@@ -287,6 +282,10 @@ img {
 	margin: 0 auto;
 }
 
+.back_space p {
+	margin-top: 25px;
+}
+
 .advantages_items_picture {
 	width: 800px;
 }
@@ -315,6 +314,7 @@ img {
 .hotel_search {
 	line-height: 24px;
 	color: var(--basic-extra-dark);
+	position: relative;
 }
 
 .hotel_search h2 {
@@ -353,26 +353,61 @@ img {
 	font-weight: 700;
 	color: var(--basic-dark);
 	background-color: var(--basic-white);
-	outline: 5px solid red;
+	padding: 55px;
+	box-sizing: border-box;
+	position: absolute;
+	left: 316px;
+	top: 235px;
 }
 
-.date_form p {
+.date_form div {
 	width: 458px;
 	box-sizing: border-box;
-	outline: 2px solid blue;
-	margin: 29px auto;
 }
 
-.date label {
-	margin-right: 20px;
+.date_arrival, .date_form_departure {
+	display: flex;
+}
+
+.date_arrival label, .date_form_departure label, .date_form_departure label  {
+	width: 112px;
+	height: 26px;
+	margin-right: 0;
+	align-self: center;
+}
+
+.date_form_departure {
+	margin-top: 29px;
+}
+
+.date_how_much {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	margin-bottom: 54px;
+}
+
+.date_how_much_adults, .date_how_much_child {
+	display: flex;
+}
+
+.date_how_much_adults {
+	width: 226px;
+}
+
+.date_how_much_child {
+	width: 189px;
 }
 
 .how_much_adults {
-	margin-right: 37px;
+	width: 112px;
+	align-self: center;
 }
 
 .how_much_child {
-	margin-right: 25px;
+	margin-left: 53px;
+	width: 65px;
+	align-self: center;
 }
 
 .button_gap {
@@ -380,34 +415,36 @@ img {
 }
 
 .arrival, .departure {
-	width: 346px;
+	width: 344px;
 	height: 38px;
 	margin-left: 0;
-	outline: 2px solid blue;
-}
-
-.date_arrival {
-	margin-top: 55px;
-}
-
-.arrival {
 	position: relative;
 	margin: 0;
 	padding: 0;
+	padding-left: 10px;
+	margin-left: 10px;
 }
 
-.arrival::after {
-	content: "";
-	position: absolute;
+.button_departure {
 	background-image: url("../img/calendar.svg");
 	width: 21px;
 	height: 23px;
-	background-position: 0 0;
-	background-color: red;
+	border: none;
+	position: absolute;
+	padding: 9px;
+	right: 65px;
+	top: 128px;
 }
 
-.button_find {
-	margin-left: 55px;
+.button_arrival {
+	background-image: url("../img/calendar.svg");
+	width: 21px;
+	height: 23px;
+	border: none;
+	position: absolute;
+	padding: 9px;
+	right: 65px;
+	top: 62px;
 }
 
 .button_how_much, .how_much_people {
@@ -415,6 +452,7 @@ img {
 	height: 38px;
 	padding: 0;
 	margin-right: 0;
+	text-align: center;
 }
 
 .arrival, .departure, .button_how_much, .how_much_people {
@@ -432,11 +470,6 @@ img {
 	background-color: var(--basic-white);
 }
 
-.button_how_much, .calendar {		
-/*Пока оставляю так, в дальнейшем сделать белую часть иконки изменяющей цвет*/
-
-}
-
 .button_find {
 	width: 458px;
 	height: 58px;
@@ -447,7 +480,6 @@ img {
 	text-transform: uppercase;
 	font-weight: bold;
 	border: none;
-	margin-bottom: 55px;
 }
 
 .button_find:hover {
@@ -553,11 +585,57 @@ img {
 	background-repeat: no-repeat;
 	color: var(--basic-white);
 	display: flex;
+	min-height: 217px;
+}
+
+.selection_of_conditions fieldset {
+	border: none;
+	padding: 0;
+}
+
+.infrastructure_list, .type_of_housing_list {
+	padding: 0;
+	margin: 0;
+}
+
+.description {
+	display: block;
+	position: relative;
+	margin-left: 40px;
+	font-size: 14px;
+}
+
+.list li {
+	margin-top: 26px;
+	margin-left: 72px;
 }
 
 .infrastructure {
 	width: 300px;
-	margin: 0;
+}
+
+.description_checkbox + label::before {
+	content: "";
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	border: 2px solid var(--basic-white);
+	border-radius: 4px;
+	left: -40px;
+
+}
+
+.description_checkbox:checked + label::after {
+	content: "";
+	position: absolute;
+	width: 27px;
+	height: 23px;
+	left: -33px;
+	top: 2px;
+	background-image: url("../img/selected.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	transform: scale(1.2);
 }
 
 .type_of_housing {
@@ -565,13 +643,11 @@ img {
 	margin: 0;
 }
 
-.cost_filter {
-	width: 600px;
-	margin: 0;
-}
-
 .caption {
 	font-size: 16px;
+	padding-top: 26px;
+	margin-left: 72px;
+	font-weight: bold;
 }
 
 .infrastructure_items, .type_of_housing_items {
@@ -586,18 +662,105 @@ img {
 	background-color: transparent;
 	text-transform: uppercase;
 	border-radius: 2px;
+	margin-top: 33px;
+	left: 50px;
+	display: block;
+	margin: 33px auto
 }
 
-.cost {
+.button_show:hover {
+	background-color: var(--basic-white);
+	color: var(--basic-dark);
+}
+
+.filter_item {
+	margin: 0;
+	padding: 0;
+	border: none;
+	margin-top: 26px;
+	margin-left: 210px;
+}
+
+
+
+.filter_item legend {
+	margin-bottom: 10px;
+}
+
+.range-filter {
+	width: 317px;
+}
+
+.scale {
+	height: 2px;
+	background: var(--basic-white);
+	opacity: 0.3;
+}
+
+.range_controls {
+	position: relative;
+	padding-top: 20px;
+}
+
+.price_controls {
 	border: 2px solid var(--basic-white);
 	border-radius: 2px;
+	display: flex;
+	justify-content: space-around;
 }
 
-.cost input {
+.price_controls input {
+	width: 50px;
+	border: none;
 	background-color: transparent;
-	text-transform: uppercase;
 	color: var(--basic-white);
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
+
+.vertical_line {
+	width: 2px;
+	height: 17px;
+	border-radius: 2px;
+	background-color: var(--basic-white);
+	align-self: center;
+}
+
+.bar {
+	width: 70%;
+	height: 2px;
+	background-color: var(--basic-white);
+	opacity: 1;		/*Не возвращает непрозрачность*/
+}
+
+.toggle {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	padding: 0;
+	border: 8px solid var(--basic-white);
+	background-color: var(--basic-grey);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 var(--basic-grey);
+	top: -9px;
+}
+
+.toggle_min {
+	top: 10px;
+}
+
+.toggle_max {
+	top: 10px;
+	left: 248px;
+}
+
+.min_price {
+	margin-left: 30px;
+	margin-right: -40px;
+}
+
+
+
 
 /*---------------------------------Result---------------------------------*/
 
@@ -721,7 +884,7 @@ img {
 .choice_of_location a:active {
 	color: var(--basic-dark);
 	opacity: 0.3;
-/
+}
 
 .more_details {
 	width: 110px;
@@ -743,7 +906,6 @@ img {
 	background-color: var(--basic-hard-blue);
 	color: rgba(0,0,0,0.1);
 }
-
 
 .reservation {
 	width: 142px;

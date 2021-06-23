@@ -111,26 +111,30 @@
 				<img src="img/map.png"  width="1199" height="594" alt="Карта" id="map">
 
 				<form class="date_form" action="#" method="get">
-					<p class="date_arrival">
+					<div class="date_arrival">
 						<label for="arrival">Дата заезда:</label>
 						<input class="arrival" type="text" placeholder="24 Апреля 2017">
-						<button class="button"></button>
-		   			 </p>
-		    		<p class="date">
+						<button class="button_arrival "><!-- <img class="calendar" src="img/calendar.svg"  width="21" height="23" alt="calendar"> --></button>
+		   			 </div>
+		    		<div class="date_form_departure">
 						<label for="date_departure">Дата выезда:</label>
 						<input class="departure" type="text" placeholder="4 июля 2017">
-						<button class="button"><img class="calendar" src="img/calendar.svg" width="21" height="23" alt="Календарь"></button>
-					</p>
-					<p class="date_how_much">
+						<button class="button_departure "><!-- <img class="calendar" src="img/calendar.svg"  width="21" height="23" alt="calendar"> --></button>
+					</div>
+					<div class="date_how_much">
+						<div class="date_how_much_adults">
 							<label  class="how_much_adults" for="adults">Взрослые</label>
 							<button class="button_how_much"> - </button>
 							<input class="how_much_people" type="text" placeholder="2" id="adults">
 							<button class="button_how_much button_gap"> + </button>
+						</div>
+						<div class="date_how_much_child">
 							<label class="how_much_child" for="child">Дети</label>
 							<button class="button_how_much"> - </button>
 							<input class="how_much_people" type="text" placeholder="0" id="child">
 							<button class="button_how_much"> + </button>
-					</p>
+						</div>
+					</div>
 					<button class="button_find">Найти</button>
 				</form>
 			</section>

@@ -26,49 +26,69 @@
 		</header>
 		<main>
 
-			<h1 class="catalog">Каталог</h1>
+			<h1 class="visually-hidden">Каталог</h1>
 
 			<form class="catalog_form" action="#" method="get">
 
-			<h2 class="selection">Выбор условий</h2>
+			<h2 class="visually-hidden">Выбор условий</h2>
 			<section class="selection_of_conditions">
 
 				<fieldset class="infrastructure">
 					<legend class="caption">Инфраструктура:</legend>
-					<ul class="infrastructure_list">
+					<ul class="infrastructure_list list">
 						<li class="infrastructure_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="pool" checked id="check_pool">
 							<label class="description" for="check_pool">Бассейн</label>
-							<input class="description_checkbox" type="checkbox" name="pool" checked id="check_pool">
 						</li>
 						<li class="infrastructure_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="parking"  id="check_parking">
 							<label class="description" for="check_parking">Парковка</label>
-							<input class="description_checkbox" type="checkbox" name="parking"  id="check_parking">
 						</li>
 						<li class="infrastructure_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="wi-fi"  id="check_wifi">
 							<label class="description" for="check_wifi">Wi-fi</label>
-							<input class="description_checkbox" type="checkbox" name="wi-fi"  id="check_wifi">
 						</li>
 					</ul>
 				</fieldset>
+				
 				<fieldset class="type_of_housing">
 					<legend class="caption">Тип жилья:</legend>
-					<ul class="type_of_housing_list">
+					<ul class="type_of_housing_list list">
 						<li class="type_of_housing_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="hotel" checked id="check_hotel">
 							<label class="description" for="check_hotel">Гостиница</label>
-							<input class="description_checkbox" type="checkbox" name="hotel" checked id="check_hotel">
 						</li>
 						<li class="type_of_housing_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="motel"  checked id="check_motel">
 							<label class="description" for="check_motel">Мотель</label>
-							<input class="description_checkbox" type="checkbox" name="motel"  checked id="check_motel">
 						</li>
 						<li class="type_of_housing_items">
+							<input class="description_checkbox visually-hidden" type="checkbox" name="apartments" checked id="check_apartments">
 							<label class="description" for="check_apartments">Апартаменты</label>
-							<input class="description_checkbox" type="checkbox" name="apartments" checked id="check_apartments">
 						</li>
 					</ul>
 				</fieldset>
 
-				<div class="cost_filter">
+				<fieldset class="filter_item">
+					<legend>Стоимость в сутки</legend>
+					<div class="range-filter">
+						<div class="price_controls">
+								<label class="min_price">От <input type="number" name="min_price" value="0"></label>
+								<div class="vertical_line"></div>
+								<label class="max_price">До <input type="number" name="max_price" value="3000"></label>
+							</div>
+						<div class="range_controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div tabindex="0" class="toggle toggle_min"></div>
+							<div tabindex="0" class="toggle toggle_max"></div>
+						</div>
+
+					</div>
+					<button class="button_show" type="submit" name="show">Показать</button>
+				</fieldset>
+				<!-- <div class="cost_filter">
 					<p class="caption filter_caption">Стоимость в сутки,₽:</p>	
 					<div class="filter">
 						<div class="filter-range-wrapper">
@@ -87,13 +107,13 @@
 						</div>
 					</div>
 					<button class="button_show" type="submit" name="show">Показать</button>
-				</div>
+				</div> -->
 			</section>
 
 			</form>
 			
 			<section class="result">
-				<h2>Результаты поиска</h2>
+				<h2 class="visually-hidden">Результаты поиска</h2>
 				<div class="result_find_line">
 					<div class="result_find">Найдено 3</div>
 
