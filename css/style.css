@@ -360,8 +360,9 @@
 	padding: 55px;
 	box-sizing: border-box;
 	position: absolute;
-	left: 316px;
+	left: 316px;		/*Стоит переделать, чтобы через margin отцентрировать или и так можно?*/
 	top: 233px;
+	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .date_form div {
@@ -423,9 +424,7 @@
 	height: 38px;
 	margin-left: 0;
 	position: relative;
-	margin: 0;
-	padding: 0;
-	padding-left: 10px;
+	padding: 0 13px;
 	margin-left: 10px;
 }
 
@@ -465,6 +464,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	outline: none;
+	color: var(--basic-dark);
 }
 
 .arrival:hover, .departure:hover {
@@ -496,6 +496,12 @@
 .button_find:active {
 	background-color: var(--basic-hard-blue);
 	color: rgba(84, 150, 189, 0.3);				/*Не получается сделать прозрачным*/
+}
+
+.location_foto {
+	width: 135px;
+	height: 90px;
+	background-color: var(--basic-white);
 }
 
 /*
@@ -596,7 +602,7 @@
 /*---------------------------------Catalog---------------------------------*/
 
 .selection_of_conditions {
-	background-image: url("../img/background_photo@2x.jpg");
+	background-image: url("../img/background_catalog.jpg");
 	background-position: right 50% bottom 50%;
 	background-repeat: no-repeat;
 	color: var(--basic-white);
@@ -761,6 +767,10 @@
 	top: -9px;
 }
 
+.toggle:hover {
+	transform: scale(1.2);
+}
+
 .toggle_min {
 	top: 10px;
 }
@@ -803,7 +813,11 @@
 
 .result_sort_item  {
 	margin: 0;
-	margin: 31px 32px 36px 32px;
+	margin: 31px 32px 36px 0;
+}
+
+.result_sort_item:first-child {
+	margin-left: 34px;
 }
 
 .leaf li {
