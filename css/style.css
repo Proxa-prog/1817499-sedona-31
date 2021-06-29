@@ -23,18 +23,15 @@
 	min-width: 1200px;
 	margin: 0;
 	padding: 0;
-	font-family: "PT Sans", Arial, sans-seirf;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	font-style: normal;
 	font-weight: normal;
 	color: var(--basic-extra-grey);
 	text-transform: uppercase;	
-	background: var(--basic-hard-grey);
+	background: var(--basic-extra-light-grey);
 	min-height: 100%;
-	display: grid;
-	grid-template-rows: min-content 1fr min-content;
-	align-content: start;
 }
 
 .page {
@@ -47,6 +44,7 @@
   margin-right: auto;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
   background-color: var(--basic-white);
+  position: relative;
 }
 
 .visually-hidden {
@@ -107,20 +105,24 @@
   margin-left: auto;
 }
 
-.site_navigation a {
+.navigation_item a {
 	color: var(--basic-dark);
 }
 
-.site_navigation a:hover {
+.navigation_item a:visited {
+	color: var(--basic-brown);
+}
+
+.navigation_item a:hover {
 	color: var(--basic-blue);
 }
 
-.site_navigation a:active {
-	color: var(--basic-dark);
+.navigation_item a:focus {
+	color: var(--basic-brown);
 }
 
-.site_navigation a:visited {
-	color: var(--basic-brown);
+.navigation_item a:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 /*---------------------------------main_container---------------------------------*/
@@ -129,7 +131,8 @@
 .container_logo {
 	text-align: center;
 	background-image: url("../img/background_photo@2x.jpg");
-	background-position: top center;
+	background-position: center;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -179,7 +182,7 @@
 	width: 400px;
 	height: 330px;
 	text-align: center;
-	padding-top: 160px;
+	padding-top: 138px;
 }
 
 .housing h3 {
@@ -194,7 +197,7 @@
 	background-image: url(../img/home.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	bottom: 50px;
+	bottom: 46px;
 	left: 162px;
 }
 
@@ -210,7 +213,7 @@
 	background-image: url(../img/hamburger.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	bottom: 50px;
+	bottom: 46px;
 	left: 162px;
 }
 
@@ -226,7 +229,7 @@
 	background-image: url(../img/gift.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	bottom: 50px;
+	bottom: 46px;
 	left: 170px;
 }
 
@@ -347,6 +350,7 @@
 
 .button_hotel_search:active {
 	background-color: var(--basic-hard-brown);
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .date_form {
@@ -360,7 +364,8 @@
 	padding: 55px;
 	box-sizing: border-box;
 	position: absolute;
-	left: 316px;		/*Стоит переделать, чтобы через margin отцентрировать или и так можно?*/
+	left: 50%;
+	transform: translateX(-50%);
 	top: 233px;
 	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
@@ -420,6 +425,7 @@
 }
 
 .arrival, .departure {
+	box-sizing: border-box;
 	width: 344px;
 	height: 38px;
 	margin-left: 0;
@@ -474,7 +480,6 @@
 .arrival:focus, .departure:focus {
 	background-color: var(--basic-white);
 	border: 2px solid var(--basic-extra-light-grey);
-
 }
 
 .button_find {
@@ -495,7 +500,7 @@
 
 .button_find:active {
 	background-color: var(--basic-hard-blue);
-	color: rgba(84, 150, 189, 0.3);				/*Не получается сделать прозрачным*/
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .location_foto {
@@ -510,6 +515,13 @@
 .main_footer {
 	display: flex;
 	min-height: 120px;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	bottom: 0;
+}
+
+.main_footer_catalog {
+	position: static;
 }
 
 .footer_contact, .footer_social, .button_html_logo, .footer_copiright {
@@ -518,6 +530,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
 }
 
 .footer_contact p {
@@ -567,8 +580,7 @@
 	background-color: var(--basic-hard-blue);
 }
 
-.social_button:active path {		/*Не показывает прозрачным*/
-	fill: var(--basic-hard-blue);
+.social_button:active path {
 	fill-opacity: 0.3;
 }
 
@@ -598,6 +610,13 @@
 .html_logo {
 	margin-left: 15px;
 }
+
+.map {
+	background-image: url("../img/map.png");
+	width: 1200px;
+	height: 594px;
+}
+
 
 /*---------------------------------Catalog---------------------------------*/
 
@@ -644,7 +663,6 @@
 	border: 2px solid var(--basic-white);
 	border-radius: 4px;
 	left: -40px;
-
 }
 
 .description_checkbox:checked + label::after {
@@ -703,20 +721,12 @@
 	margin-left: 210px;
 }
 
-
-
 .filter_item legend {
 	margin-bottom: 10px;
 }
 
 .range-filter {
 	width: 317px;
-}
-
-.scale {
-	height: 2px;
-	background: var(--basic-white);
-	opacity: 0.3;
 }
 
 .range_controls {
@@ -748,11 +758,16 @@
 	align-self: center;
 }
 
-.bar {
-	width: 70%;
+.scale {
 	height: 2px;
-	background-color: var(--basic-white);
-	opacity: 1;		/*Не возвращает непрозрачность*/
+	background: var(--basic-white);
+	opacity: 0.3;
+}
+
+.scale .bar {
+	width: 80%;
+	height: 2px;
+	background: red/*var(--basic-white)*/;			/*Другие цвета закрашивают, но белый игнорирует, почему то.*/
 }
 
 .toggle {
@@ -765,6 +780,7 @@
 	border-radius: 50%;
 	box-shadow: 0 2px 1px 0 var(--basic-grey);
 	top: -9px;
+	cursor: pointer;
 }
 
 .toggle:hover {
@@ -784,8 +800,6 @@
 	margin-left: 30px;
 	margin-right: -40px;
 }
-
-
 
 
 /*---------------------------------Result---------------------------------*/
@@ -908,6 +922,14 @@
 	fill: var(--basic-dark);
 }
 
+.result_up:active path, .result_down:active path {
+	fill: var(--basic-blue);
+}
+
+.result_up:focus path, .result_down:focus path {
+	fill: var(--basic-blue);
+}
+
 .leaf li:last-child {
 	margin-right: 73px;
 }
@@ -925,21 +947,27 @@
 	opacity: 0.3;
 }
 
+.result_sort_item a:visited {
+	text-decoration: none;
+	color: var(--basic-blue);
+}
+
 .result_sort_item a:hover {
 	text-decoration: underline;
 	color: var(--basic-blue);
 	opacity: 1;
 }
 
-}
-.result_sort_item a:active {	/*Не срабатывает color при нажатии*/
-	text-decoration: none;
-	color: var(--basic-dark);
-}
-
-.result_sort_item a:visited {
+.result_sort_item a:focus {
 	text-decoration: none;
 	color: var(--basic-blue);
+	opacity: 1;
+}
+
+.result_sort_item a:active {
+	text-decoration: none;
+	color: var(--basic-dark);
+	opacity: 1;
 }
 
 .leaf, .choice_list {	
@@ -981,7 +1009,7 @@
 
 .more_details:active {
 	background-color: var(--basic-hard-blue);
-	color: rgba(0,0,0,0.1);
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .reservation {
@@ -1002,7 +1030,7 @@
 
 .reservation:active {
 	background-color: var(--basic-hard-brown); 
-	color: rgba(0,0,0,0.1);
+	color: rgba(255,255 ,255 ,0.3);
 }
 
 .rating {
