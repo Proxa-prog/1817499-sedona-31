@@ -540,6 +540,10 @@
 
 .footer_contact {
 	flex-direction: column;
+	box-sizing: border-box;
+    padding-left: 71px;
+    padding-bottom: 21px;
+
 }
 
 .footer_lists {
@@ -547,6 +551,8 @@
 	width: 150px;
 	justify-content: space-between;
 	text-align: center;
+	margin-right: 39px;
+    margin-bottom: 24px;
 }
 
 .main_footer a {
@@ -554,6 +560,12 @@
 	font-weight: bold;
 	line-height: 26px;
 	color: var(--basic-dark);	
+}
+
+.footer_copiright {
+	padding-bottom: 13px;
+    padding-right: 66px;
+    box-sizing: border-box;
 }
 
 .footer_copiright p {
@@ -642,27 +654,28 @@
 .description {
 	display: block;
 	position: relative;
-	margin-left: 40px;
+	margin-left: 39px;
 	font-size: 14px;
 }
 
 .list li {
 	margin-top: 26px;
 	margin-left: 72px;
+	margin-bottom: -2px;
 }
 
 .infrastructure {
-	width: 300px;
+	width: 251px;
 }
 
 .description_checkbox + label::before {
 	content: "";
 	position: absolute;
-	width: 23px;
-	height: 23px;
+	width: 20px;
+	height: 19px;
 	border: 2px solid var(--basic-white);
 	border-radius: 4px;
-	left: -40px;
+	left: -42px;
 }
 
 .description_checkbox:checked + label::after {
@@ -670,8 +683,7 @@
 	position: absolute;
 	width: 27px;
 	height: 23px;
-	left: -33px;
-	top: 2px;
+	left: -36px;
 	background-image: url("../img/selected.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -681,6 +693,7 @@
 .type_of_housing {
 	width: 300px;
 	margin: 0;
+	margin-left: 45px;
 }
 
 .caption {
@@ -705,7 +718,7 @@
 	margin-top: 33px;
 	left: 50px;
 	display: block;
-	margin: 33px auto
+	margin: 33px 0 0 85px;
 }
 
 .button_show:hover {
@@ -714,15 +727,18 @@
 }
 
 .filter_item {
+	width: 641px;
 	margin: 0;
 	padding: 0;
 	border: none;
 	margin-top: 26px;
-	margin-left: 210px;
+	margin-left: 346px;
 }
 
 .filter_item legend {
 	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .range-filter {
@@ -735,6 +751,7 @@
 }
 
 .price_controls {
+	height: 34px;
 	border: 2px solid var(--basic-white);
 	border-radius: 2px;
 	display: flex;
@@ -756,6 +773,7 @@
 	border-radius: 2px;
 	background-color: var(--basic-white);
 	align-self: center;
+	margin-left: 2px;
 }
 
 .scale {
@@ -772,8 +790,8 @@
 
 .toggle {
 	position: absolute;
-	width: 4px;
-	height: 4px;
+	width: 3px;
+	height: 3px;
 	padding: 0;
 	border: 8px solid var(--basic-white);
 	background-color: var(--basic-grey);
@@ -793,12 +811,19 @@
 
 .toggle_max {
 	top: 10px;
-	left: 248px;
+	left: 253px;
 }
 
-.min_price {
-	margin-left: 30px;
-	margin-right: -40px;
+.min_price, .max_price {
+	width: 155px;
+	text-align: center;
+	box-sizing: border-box;
+    padding-left: 48px;
+    padding-top: 2px;
+}
+
+.max_price {
+	padding-left: 27px;
 }
 
 
@@ -827,15 +852,16 @@
 
 .result_sort_item  {
 	margin: 0;
-	margin: 31px 32px 36px 0;
-}
-
-.result_sort_item:first-child {
-	margin-left: 34px;
+	margin: 31px 10px 39px 23px;
 }
 
 .leaf li {
-	margin: 31px auto 36px;
+	margin: 34px auto 33px;
+}
+
+.leaf li:first-child {
+	margin-right: 12px;
+    margin-left: 21px;
 }
 
 .result_sort_list {
@@ -866,7 +892,7 @@
 
 .place {
 	display: flex;
-	margin-bottom: 16px;
+	margin-bottom: 19px;
 }
 
 .place_price {
@@ -876,8 +902,8 @@
 }
 
 .choice_item_foto {
-	width: 180px;
-	padding: 30px 0 30px 73px;
+	width: 164px;
+	padding: 25px 0 30px 73px;
 }
 
 .choice_item_location {
@@ -892,7 +918,7 @@
 
 .choice_of_location {
 	margin: 0;
-	margin-top: 23px;
+	margin-top: 21px;
 	margin-bottom: 7px;
 }
 
@@ -910,12 +936,9 @@
 }
 
 .star {
-	margin-top: 20px;
-	margin-bottom: 50px;
-}
-
-.leaf li:first-child {
-	margin-right: 12px;
+	margin-top: 26px;
+    margin-bottom: 42px;
+    margin-left: 20px;
 }
 
 .result_up:hover path, .result_down:hover path {
@@ -997,7 +1020,7 @@
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: bold;
-	padding: 7px 20px;
+	padding: 3px 17px;
 	background-color: var(--basic-blue);
 	text-decoration: none;
 	color: var(--basic-white);
@@ -1018,7 +1041,7 @@
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: bold;
-	padding: 7px 20px;
+	padding: 3px 17px;
 	background-color: var(--basic-brown);
 	text-decoration: none;
 	color: var(--basic-white);
@@ -1044,4 +1067,5 @@
 	vertical-align: top;
 	background-color: var(--basic-extra-light-grey);
 	color: var(--basic-light-dark);
+	margin-left: 20px;
 }
