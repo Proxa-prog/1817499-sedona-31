@@ -458,6 +458,7 @@
 	padding: 0;
 	margin-right: 0;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 .button_how_much:hover path, .button_how_much:hover rect {
@@ -467,6 +468,11 @@
 .button_how_much:active path, .button_how_much:active rect {
 	fill: var(--basic-blue);
 }
+
+.button_how_much:focus {
+
+}
+
 .arrival, .departure, .button_how_much, .how_much_people {
 	background-color: var(--basic-extra-light-grey);
 	border: none;
@@ -480,7 +486,7 @@
 	background-color: var(--basic-grey-medium);
 }
 
-.arrival:focus, .departure:focus {
+.arrival:focus, .how_much_people:focus, .departure:focus, .button_how_much:focus, .button_arrival:focus, .button_departure:focus {
 	background-color: var(--basic-white);
 	border: 2px solid var(--basic-extra-light-grey);
 }
@@ -628,6 +634,10 @@
 
 .footer_visit {
 	margin-bottom: 9px;
+}
+
+.footer_phone, .footer_visit {
+	text-decoration: none;
 }
 
 .html_logo {
