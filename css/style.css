@@ -16,6 +16,7 @@
 	--basic-extra-light-grey: #F2F2F2;
 	--basic-grey-medium:#EBEBEB;
 	--basic-asfalt:#A9A9A9;
+	--basic-asfalt-light:#6A6A6A;
 	--basic-hard-grey: #888888;
 }
 
@@ -806,7 +807,7 @@
 .scale .bar {
 	width: 80%;
 	height: 2px;
-	background: red/*var(--basic-white)*/;			/*Другие цвета закрашивают, но белый игнорирует, почему то.*/
+	background: rgba(255, 255, 255, 1);			/*Другие цвета закрашивают, но белый игнорирует, почему то.*/
 }
 
 .toggle {
