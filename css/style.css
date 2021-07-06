@@ -102,8 +102,20 @@
 	padding: 15px 0;
 }
 
+.site_navigation li:nth-child(2) {
+	padding-right: 21px;
+	box-sizing: border-box;
+}
+
 .site_navigation li:nth-child(3) {
-  margin-left: auto;
+  	margin-left: auto;
+ 	box-sizing: border-box;
+  	padding-left: 37px;
+}
+
+.site_navigation li:nth-child(4) {
+  box-sizing: border-box;
+  padding-left: 16px;
 }
 
 .navigation_item a {
@@ -214,7 +226,7 @@
 	background-image: url(../img/hamburger.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	bottom: 46px;
+	bottom: 50px;
 	left: 162px;
 }
 
@@ -230,8 +242,8 @@
 	background-image: url(../img/gift.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	bottom: 46px;
-	left: 170px;
+	bottom: 49px;
+	left: 167px;
 }
 
 .advantages_items {
@@ -434,14 +446,16 @@
 	height: 38px;
 	margin-left: 0;
 	position: relative;
-	padding: 0 13px;
-	margin-left: 12px;
+	padding: 0 11px;
+	margin-left: 14px;
 }
 
 .button_arrival, .button_departure {
 	right: 9px;
 	bottom: 8px;
 	border: none;
+	padding-right: 9px;
+    box-sizing: border-box;
 }
 
 .button_arrival:hover path, .button_departure:hover path {
