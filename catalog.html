@@ -9,7 +9,7 @@
 	<link href="manifest.webmanifest" rel="manifest">
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page_body">
 	<div class="container">
@@ -74,12 +74,10 @@
 			<section class="result">
 				<h2 class="visually-hidden">Результаты поиска</h2>
 				<div class="result_find_line">
-					<div class="result_find">
-						Найдено: 3
-					</div>
+					<p class="result_find">Найдено: 3</p>
+					<h3 class="sort_heading">Сортировка:</h3>
 					<ul class="result_sort_list">
-						<li class="result_sort_item">Сортировка:</li>
-						<li class="result_sort_item">
+						<li class="result_sort_item result_sort_item_selected">
 							<a aria-label="Сортировка по цене" class="price" href="#">По цене</a>
 						</li>
 						<li class="result_sort_item">
@@ -165,8 +163,7 @@
 			</div>
 			<div class="footer_copiright">
 				<a aria-label="htmlacademy" class="button_html_logo" href="https://htmlacademy.ru/intensive/htmlcss">
-				<p>Website by</p>
-				<div class="html_logo"></div></a>
+				<p class="html_logo">Website by</p></a>
 			</div>
 		</footer>
 	</div>
